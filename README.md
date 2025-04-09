@@ -61,7 +61,13 @@ This script fine-tunes the Qwen 2.5B model using the DeepSeek dataset, which con
    ```bash
    pip install datasets transformers torch peft trl flash-attn
    ```
-2. Run the script to fine-tune the model and save the trained model and tokenizer.
+2. Download model:
+   ```bash
+   mkdir -p ./model/Qwen2.5-1.5B
+   export HF_TOKEN=xxxx   # get token from huggingface.
+   huggingface-cli download Qwen/Qwen2.5-1.5B --local-dir ./model/Qwen2.5-1.5B
+   ```
+3. Run the script to fine-tune the model and save the trained model and tokenizer.
 
 ---
 

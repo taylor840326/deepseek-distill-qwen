@@ -90,7 +90,7 @@ def ask_deepseek(query, model_config):
 # Save questions and answers to JSON file
 def save_answers_to_json(answers, output_file_path):
     with open(output_file_path, 'a', encoding='utf-8') as file:
-        json.dump(answers, file, ensure_ascii=False, indent=4)
+        file.write(json.dumps(answers,indent=4))
 
 # Main function
 def main():
