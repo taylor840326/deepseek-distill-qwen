@@ -86,7 +86,11 @@ print(formatted_dataset)
 # Local Qwen model path
 model_path = "./model/Qwen2.5-1.5B"
 # Load the local tokenizer and model
-tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
+tokenizer = AutoTokenizer.from_pretrained(
+    model_path, 
+    trust_remote_code=True,
+    padding_side = 'left'
+)
 
 # Add custom tokens
 CUSTOM_TOKENS = ["<think>", "</think>"]
